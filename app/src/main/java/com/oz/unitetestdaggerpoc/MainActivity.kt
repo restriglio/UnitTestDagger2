@@ -1,27 +1,34 @@
 package com.res.unitetestdaggerpoc
 
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import android.os.Handler
+import com.oz.unitetestdaggerpoc.BaseActivity
+import com.oz.unitetestdaggerpoc.SecondActivity
 import com.res.unitetestdaggerpoc.di.DaggerAppComponent
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
-
-
-    @Inject
-    lateinit var repo: UserRepository
+class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        DaggerAppComponent.builder().build().inject(this)
+        textView.text = userRepository.name
     }
 
     override fun onResume() {
         super.onResume()
-        textView.text = repo.name
+
+        Handler().postDelayed({
+            startActivity(
+                Intent(this, SecondActivity::class.java)
+            )
+        }, 1000)
+
+
     }
+
 }

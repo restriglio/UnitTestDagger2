@@ -18,7 +18,7 @@ class ExampleUnitTest : BaseTest() {
 
     @Test
     fun isNameCorrect() {
-        assertEquals(userRepository.name, "Rulo")
+        assertEquals(userRepository.name, "Repo")
     }
 
     @Test

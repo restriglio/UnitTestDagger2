@@ -2,6 +2,6 @@ package com.res.unitetestdaggerpoc
 
 class UserRepository {
 
-    var name : String = "Rulo"
+    var name : String = "Repo"
 
 }

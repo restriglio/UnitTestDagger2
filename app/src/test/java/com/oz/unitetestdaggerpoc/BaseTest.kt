@@ -9,8 +9,4 @@ abstract class BaseTest {
     @Inject
     lateinit var userRepository: UserRepository
 
-
-    init {
-        DaggerTestAppComponent.builder().build().inject(this)
-    }
 }

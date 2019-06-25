@@ -11,6 +11,11 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest : BaseTest() {
 
+
+    init {
+        DaggerTestAppComponent.builder().build().inject(this)
+    }
+
     @Test
     fun isNameCorrect() {
         assertEquals(userRepository.name, "Rulo")
@@ -18,6 +23,8 @@ class ExampleUnitTest : BaseTest() {
 
     @Test
     fun isNameNotCorrect() {
-        assertEquals(userRepository.name, "Areturo")
+        assertEquals(userRepository.name, "Pepito")
     }
+
+
 }

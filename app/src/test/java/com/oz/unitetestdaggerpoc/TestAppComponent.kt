@@ -1,6 +1,5 @@
 package com.res.unitetestdaggerpoc
 
-import com.res.unitetestdaggerpoc.di.UserModule
 import dagger.Component
 import javax.inject.Singleton
 

@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import com.oz.unitetestdaggerpoc.BaseActivity
 import com.oz.unitetestdaggerpoc.SecondActivity
-import com.res.unitetestdaggerpoc.di.DaggerAppComponent
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
-import javax.inject.Inject
 
 class MainActivity : BaseActivity() {
 
